@@ -11,7 +11,7 @@ const TypeWriter = () => {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '50px',
-        paddingTop: '200px'
+        paddingTop: '50px'
     }
 
     return (
