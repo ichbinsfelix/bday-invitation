@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { db } from '../firebase'
+import { db } from '../firebase/firebase'
 
 import '../app.css'
 
@@ -67,7 +67,7 @@ const Contact = () => {
             })
             .then(() => {
                 setLoader(false)
-                alert("Your message has been submitted👍")
+                alert("grazie mille, see you at the corner👍")
             })
             .catch((error) => {
                 alert(error.message)
