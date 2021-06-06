@@ -20,9 +20,14 @@ const Contact = () => {
         fontSize: '35px'
     }
 
+    const margin = {
+        margin: '35px',
+        fontSize: '35px'
+    }
+
     const wrapperIcons = {
         display: 'flex',
-        marginBottom: '100px'
+        marginBottom: '10px'
     }
 
     const adress = {
@@ -39,13 +44,6 @@ const Contact = () => {
         padding: '10%',
         fontSize: '1.5rem'
     }
-
-    const radioButtonm = {
-        transform: 'scale(3)',
-        marginTop: '15px'
-    }
-
-
 
     //Hooks
     const [name, setName] = useState('')
@@ -92,16 +90,16 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="form" style={wrapper}>
 
                 <h1>Bitte aufüllen 🤳 😎</h1>
-                <label style={size}>wer bist du?</label>
+                <label style={margin}>wer bist du?</label>
                 <input value={name} type="text" placeholder="name" onChange={(e) => setName(e.target.value)} />
-                <h2 style={size}>meat or veggie ?</h2>
-                <label style={size}>&#129385;</label>
-                <input style={radioButtonm} type="radio" checked={radio === 'meat'} value='meat' onChange={(e) => { setRadio(e.target.value) }} />
-                <label style={size}>🍆</label>
-                <input style={radioButtonm} type="radio" checked={radio === 'veggie'} value='veggie' onChange={(e) => { setRadio(e.target.value) }} />
-                <label style={size}>wieviel leute? </label>
-                <select style={size} value={dropdown} onChange={(e) => { setDropdown(e.target.value) }} >
-                    <option style={size} value={1}>1</option>
+                <h2 style={margin}>meat or veggie ?</h2>
+                <select style={size} value={radio} onChange={(e) => { setRadio(e.target.value) }} >
+                    <option style={size} value='meat' defaultValue >&#129385; meat</option>
+                    <option style={size} value='veggie'>🍆 veggie</option>
+                </select>
+                <label style={margin}>wieviel leute? </label>
+                <select style={margin} value={dropdown} onChange={(e) => { setDropdown(e.target.value) }} >
+                    <option style={size} value={1} defaultValue >1</option>
                     <option style={size} value={2}>2</option>
                     <option style={size} value={3}>3</option>
                     <option style={size} value={4}>4</option>
